@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: darkmagenta 1px solid">
+</canvas>
+</body>
+</html>
+<script>
+  class Circle {
+      radius
+      color
+      constructor(radius,color) {
+          this.radius = radius
+          this.color = color
+
+      }
+      getCircle () {
+         return this.radius
+      }
+      getArea () {
+          return this.radius * Math.PI * this.radius
+      }
+      diameter () {
+          return this.radius * 2*Math.PI
+      }
+      getColor () {
+          return this.color
+      }
+      draw() {
+          let c = document.getElementById("myCanvas");
+          let ctx = c.getContext('2d')
+          ctx.beginPath()
+          ctx.arc(20,20,this.radius,0,2*Math.PI)
+          ctx.stroke()
+      }
+
+  }
+  let cr = new Circle(10)
+  cr.getCircle()
+  cr.draw()
+  document.write("<br>" + "Diện tích: " + cr.getArea() + "<br>" + "Chu vi: " + cr.diameter() )
+
+</script>

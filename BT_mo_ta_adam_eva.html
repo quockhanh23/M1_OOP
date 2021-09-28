@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Apple {
+        weight
+
+        constructor(weight) {
+            this.weight = weight
+
+        }
+        getWeight() {
+            return this.weight
+        }
+        setWeight(weight) {
+            this.weight = weight
+        }
+
+        decrease() {
+            return this.weight -=1
+
+        }
+        isEmpty() {
+            if (this.weight ===0) {
+                return false
+            } else {
+                return true
+            }
+
+        }
+
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+
+        }
+        getName() {
+            return this.name;
+        }
+        setName (name) {
+            this.name = name;
+        }
+        getWeight () {
+            return this.weight
+        }
+        setWeight (weight) {
+            this.weight = weight
+        }
+        isMale() {
+            if (this.gender== "male") {
+                return true
+            }else {
+                return false
+            }                 // return this.gender = true
+        }
+        getGender() {
+            return this.gender
+        }
+        setGender (gender) {
+            this.gender = gender
+        }
+        checkApple (Apple) {
+            return Apple.isEmpty()
+        }
+
+        eat (Apple)  {
+                if (Apple.isEmpty()) {
+                    Apple.decrease()
+                    this.weight += 1
+                } else {
+                    console.log("đã hết")
+                }
+            }
+            talk (string) {
+            console.log(string)
+            }
+
+    }
+    let human = new Human()
+    let apple = new Apple(10)
+    human.setName("Adam")
+    human.setWeight(50)
+    human.eat(apple)
+    console.log(apple.weight)
+    console.log(human.weight)
+
+</script>

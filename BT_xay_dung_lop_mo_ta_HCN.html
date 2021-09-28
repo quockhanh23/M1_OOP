@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: green 2px solid"></canvas>
+</body>
+</html>
+<script>
+    class Rectangular {
+        edgeA
+        edgeB
+
+        constructor(edgeA, edgeB) {
+            this.edgeA = edgeA
+            this.edgeB = edgeB
+        }
+        getArea () {
+            return this.edgeA * this.edgeB
+        }
+        getPerimeter () {
+            return (this.edgeA + this.edgeB)/2
+        }
+        draw () {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext('2d')
+            ctx.beginPath()
+            ctx.fillRect(20, 20, 150, 100);
+            ctx.fill()
+
+        }
+    }
+    let rectangular = new Rectangular(2,3)
+
+    rectangular.draw()
+    document.write('Chu vi: ' + rectangular.getPerimeter() + ' Diện tích: ' + rectangular.getArea())
+</script>

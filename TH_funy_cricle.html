@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: 1px solid darkorchid"></canvas>
+</body>
+</html>
+<script>
+    class Cicle {
+        x
+        y
+        radius
+
+        constructor(x,y,radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius
+        }
+        getRadius () {
+            return this.radius
+        }
+        draw () {
+            let c = document.getElementById('myCanvas');
+            let ctx = c.getContext('2d')
+            ctx.beginPath()
+            ctx.arc(this.x,this.y,this.radius,0,2*Math.PI)
+            ctx.stroke()
+        }
+    }
+    let a = new Cicle(50, 50, 50)
+    a.draw()
+</script>
