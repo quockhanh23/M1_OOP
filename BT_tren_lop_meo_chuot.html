@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Meo {
+        ten;
+        mau;
+        constructor(ten) {
+            this.ten = ten;
+            this.mau = 100;
+        }
+        layThongTin() {
+            return 'Ten: ' + this.ten + '; Mau: ' + this.mau
+        }
+        biLua() {
+            this.mau -= 2
+        }
+    }
+    class Chuot {
+        ten;
+        mau;
+        constructor(ten) {
+            this.ten = ten;
+            this.mau = 100;
+        }
+        layThongTin() {
+            return 'Ten: ' + this.ten + '; Mau: ' + this.mau
+        }
+        biCao() {
+            this.mau -= 1
+        }
+    }
+
+    let meo1 = new Meo('Tom');
+    let meo2 = new Meo('Oggy');
+    let chuot1 = new Chuot('Jerry');
+    meo1.biLua();
+    meo2.biLua();
+    chuot1.biCao();
+    document.write(meo1.layThongTin() + '<br>')
+    document.write(meo2.layThongTin() + '<br>')
+    document.write(chuot1.layThongTin())
+</script>

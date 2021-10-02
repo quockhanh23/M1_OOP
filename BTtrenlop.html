@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Gago {
+        name;
+        price;
+        age;
+        gender;
+        hight;
+        weight;
+
+
+        constructor(name, price, age, gender,hight,weight) {
+            this.name = name
+            this.price = price
+            this.age = age
+            this.gender = gender
+            this.hight = hight
+            this.weight = weight
+
+        }
+        getInFor() {
+            return this.name
+        }
+
+        eating(a) {
+            alert(a)
+
+        }
+        locking() {
+            alert("haha")
+        }
+    }
+
+    let persion1 = new Gago('Khánh', '2000000$', 18, 'male','1m60','50kg')
+    let persion2 = new Gago('Lâm Chấn Huy', '100k', 30, 'female','1m60','50kg')
+    let persion3 = new Gago('Quan vũ', '100k', 22, 'female','1m60','50kg')
+
+   document.write(persion1.name + " " + persion1.age + " " + "<br>")
+   document.write(persion2.name + " ")
+
+    persion2.eating("ăn gì đó")
+
+
+</script>
